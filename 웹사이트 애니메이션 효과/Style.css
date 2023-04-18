@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    height: 2000px; /*길이를 늘어나게 설정*/
+}
+section{
+    height: 800px;/*배경화면이 보이지 않아서 임의로 높이를 설정해 주었음*/
+    background: url(http://talkimg.imbc.com/TVianUpload/tvian/TViews/image/2018/04/06/1f71c2cd-a7b9-4483-af32-a79659a67ce5.jpg) fixed;/*백그라운드 배경은 아무 내용이 없으면 나타나지 않는다*/
+}
+.photo{
+    position: absolute;/*절대값_화면에 절대적인*/
+    top: 120px; /*위에서 떨어져 있는 위치*/
+    right: 10px; /*오른쪽에서 떨엊져 있는 위치*/
+}
+h1{
+    font-size: 7em;
+    width: 350px;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 200px;
+    left: 900px;
+    animation: slide 1s ease-out; /*글자 움직임 설정*/
+}
+@keyframes slide {
+    from{
+        left: -100px; /*왼쪽으로 빠지게 만들어 줌*/
+        opacity: 0;
+    }   
+    to{
+        left: 900px;
+        opacity: 1;
+    } 
+}
+
+@keyframes disappear {
+    from{
+        left: 900px;
+        opacity: 1;
+    }   
+    to{
+        left: -100px; /*왼쪽으로 빠지게 만들어 줌*/
+        opacity: 0;
+    } 
+}

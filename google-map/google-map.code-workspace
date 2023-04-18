@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../API/google-map"
+		},
+		{
+			"name": "google-map",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "google-map"
+	}
+}

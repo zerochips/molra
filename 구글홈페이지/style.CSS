@@ -1,0 +1,198 @@
+html boby{
+  margin: 0;
+  padding: 0;
+  bos-sizing: border-box;
+  font-family: 'arial', sans-serif;
+}
+section /*상단 섹션 위치 설정 - 중앙이로 정렬됨*/
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+section header
+{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /*나란히*/
+  padding: 5px;
+}
+section header ul /*세로 정렬을 가로 정렬로 변경시켜줌*/
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section header ul li /*ul 간격 조절 - 넓어짐*/
+{
+  list-style: none;
+  margin-left: 20px;  
+}
+section header ul li a /*글자색 변경됨*/
+{
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+}
+section header ul li button
+{
+  background: #4584ef;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;
+}
+section .main
+{
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section .main .serchBox
+{
+  position: relative;
+  width: 100%;
+  margin-top: 60px;
+}
+section .main .serchBox .search
+{
+  width: 100%;
+  padding: 13px;
+  padding-left: 45px;
+  padding-right: 60px;
+  border-radius: 30px; 
+  border: 1px solid #eeeeee; /*서치칸 색변경*/
+  outline: none;        /*서치칸을 선택해도 아웃라인 색상 변동 없음_설정하지 않으면 두꺼운 검정라인으로 나타남*/
+  font-size: 16px;
+}
+section .main .serchBox .icons
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+section .main .buttons
+{
+  margin-top: 20px; /*위쪽 공간 생김*/  
+}
+section .main .buttons button
+{
+  background: none;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  color: #black;
+  font-size: 14px;
+  /*font-weight: 700;*/
+  border-radius: 3px;
+  cursor: pointer
+  /*background: #4584ef;
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  color: #0a3711;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 3px;
+  cursor: pointer;*/
+  /*margin: 0 5px;          강의에 나오는 코드
+  padding: 12px 20px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 100;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  outline: none;*/
+}
+section .main .buttons button:hover /*커서가 버튼쪽으로 이동하면 아웃라인생김*/
+{
+  /*border: 1px solid #ccc;*/
+  /*border-radius: 20px;*/
+  background-color: #0a3711;
+  font-weight: bold;
+  color: white;
+  outline: none;
+  transition: all 0.4s; /*버튼색이 부드럽게 변경됨*/
+}
+section .main .languges /*중앙 라인 전체적으로 위치 변경됨-장인들 마크*/
+{
+  display: flex;
+  margin-top: 20px; /*장인마크~버튼 까지 위치 조정됨*/
+  /*margin-bottom: 150px; /*장인offered in 라인 위치 조정됨*/
+  padding-bottom: 100px;
+}
+section .main .languges li
+{
+  list-style: none;  
+  margin: 0 5px;
+  padding-bottom: 150px; /*padding-bottom을 추가했더니 장인오퍼딘 라인이 밑에서 위로 이동됨*/
+  font-size: 13px;
+}
+section .main .languges li a
+{
+  text-decoration: none;
+  color: #1a0dab;
+}
+section .main .languges li a:hover /*커서가 텍스트로 이동하면 언더라인생김*/
+{
+  text-decoration: underline;
+}
+section .footer
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #f2f2f2;
+}
+section .footer .row
+{
+  padding: 2px 25px;
+  border-top: 1px solid rgba(0,0,0,0.01);/*숫자가 커질수록 라인이 진하게 변함*/
+}
+section .footer .row.row2
+{
+  display: flex;
+  justify-content: space-between;
+}
+section .footer .row.row2 ul
+{
+ display: flex; 
+}
+section .footer .row.row2 ul li
+{
+  list-style: none;
+}
+section .footer .row.row2 ul li a
+{
+  text-decoration: none;
+  font-size: 14px;
+  color: #5f6368;
+  margin-right: 25px;  
+}
+section .footer .row.row2 ul:nth-child(2) li a
+{
+  text-decoration: none;
+  font-size: 14px;
+  color: #5f6368;
+  margin-right: 0px;
+  margin-left: 20px;
+}

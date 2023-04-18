@@ -1,0 +1,50 @@
+body
+{
+    height: 100vh;
+    display: flex; /*버튼이 왼쪽에 붙어 세로로 길게 수정됨*/
+    justify-content: center; /*길게 수정된 채 중앙으로 이동됨*/
+    align-items: center; /*글자 크기에 맞춰 박스크기 줄어듦*/
+    background-color: #0a3711;    
+}
+
+.btn
+{
+font-size: 25px;
+padding: 15px 30px;
+border: 3px solid #ffff66;
+background-color: transparent; /*버튼 색 투명으로 변경*/
+color: #ffff66;
+text-transform: uppercase; /*영어면 모두 대문자로 변경됨*/
+letter-spacing: 5px; /*글자 간격 넓혀줌*/
+font-weight: bold; /*글자 두껍게*/
+position: relative; /*버튼 태그안 공간에 가상태그가 자리잡을 수 있게 된다*/
+transition: all 0.4s; /*글자가 부드럽게 변경되는걸 볼 수 있다*/
+overflow: hidden; /*overflow: hidden 을 설정해주면 bofore상자가 마우스를 옮겨을 때만 내부에서 보여지게 된다 */
+}
+
+.btn:focus
+{
+    outline: none; /*클릭되어 있어도 아웃라인이 나타나지 않는다*/
+}
+
+.btn::before
+{
+    content: ""; /*가상요소*/
+    position: absolute; /*부모 요소에 의해 상대적으로 조절할 수 있게된다*/
+    height: 100%;
+    width: 100%;
+    background-color: #ffff66; /*여기 까지 하면 똑같은 상자가 오른쪽 사선으로 박스가 하나 생긴다*/
+    top: 100%; /*아래로 내려줌 */
+    left: 0; /*부모 요소로부터 0px 떨어지게 하면 부모 요소를 꽉 채우게 된다*/
+    transition: all 0.4s; /*상자의 속도가 부드럽게 이동한다*/
+    z-index: -1; /*요소가 곂쳐지는 경우에는 z-index가 높을수록 앞에 위치하게되고, 낮을수록 뒤쪽에 위치하게 된다_z-index의 기본값은 auto이지만 0으로 입력된 것처럼 작동한다*/
+}
+.btn:hover::before
+{
+    transform: translateY(-100%); /*-100% 설정하면 반대편으로 상자가 이동한다_위로 이동하게 됨*/    
+}
+
+.btn:hover
+{
+    color: #0a3711; /*여기까지 하면 before요소에 가려져서 안보인다*/
+}

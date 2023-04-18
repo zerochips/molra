@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    height: 2000px;
+    background: black; /*기본 백그라운드 컬러*/
+}
+
+section{
+    height: 100vh; /*화면 높이의 100%로 하겠다는 말*/    
+    background: url(https://assets.nflxext.com/ffe/siteui/vlv3/d0a0affb-1c76-4cf0-9d75-eb531f32458c/5a0f4ebb-ab0b-4d6a-b3b7-9f1f45201b63/KR-ko-20221214-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+}
+
+section::before{ /*before 를 설정하면 섹션 전에 그 위에다가 진행하겠다는 말*/
+    content:''; /*content:'';컨텐츠가 없는 비어있는 공간에다가 만들건데*/
+    background: linear-gradient(to top,black,transparent); /*그 공간의 백그라운드는*//* linear-gradient 그라데이션을 줄건데 to right(어느뱡향_오른쪽방향) to left(왼쪽방향) top, bottom,오른쪽으로 가면서 black(마지막 가장 진한색),transparent(투명해지면서)검정색에서 투명하게 할거다*/
+    position: absolute;
+    left: 0; /*왼쪽에 공간주말고 착! 붙어라는 뜻*/
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    color: white;
+    font-size: 6em;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    font-family: sans-serif;
+}
